@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="web">
+            <group id="url">
+                <field id="specific_store_switcher" translate="label" type="select" sortOrder="70" showInDefault="0" showInWebsite="1" showInStore="0">
+                    <label>Enable Store Switcher</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If enabled, show custom store switcher. Doesn't display anything if disabled.</comment>
+                </field>
+                <field id="specific_store_code_in_url" translate="label" type="text" sortOrder="60" showInDefault="0" showInWebsite="0" showInStore="1">
+                    <label>Specific Store Code In Url</label>
+                </field>
+                <field id="specific_store_code_label" translate="label" type="text" sortOrder="70" showInDefault="0" showInWebsite="0" showInStore="1">
+                    <label>Specific Store Code Label</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
