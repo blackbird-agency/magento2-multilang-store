@@ -4,8 +4,7 @@
     "description": "N/A",
     "type": "magento2-module",
     "require": {
-        "magento/framework": "*",
-        "magento/module-store": "101.1.*"
+        "magento/framework": "*"
     },
     "license": [
         "OSL-3.0"
