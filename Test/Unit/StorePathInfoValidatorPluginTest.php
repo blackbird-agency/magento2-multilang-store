@@ -18,15 +18,15 @@ class StorePathInfoValidatorPluginTest extends TestCase
     private const FR_URL_PREFIX = 'fr';
     private const MAGE_RUN_CODE = 'MAGE_RUN_CODE';
     private const NOT_EXISTING_STORE_CODE = 'NOT_EXISTING_STORE_CODE';
-    private StoreInterface $storeMocked;
-    private StorePathInfoValidatorPlugin $subjectPathValidator;
-    private ScopeConfigInterface $scopeConfigMock;
-    private StoreManagerInterface $storeManagerMock;
-    private RequestInterface $requestMock;
+    private $storeMocked;
+    private $subjectPathValidator;
+    private $scopeConfigMock;
+    private $storeManagerMock;
+    private $requestMock;
 
-    private HttpRequest $requestMagentoMock;
+    private $requestMagentoMock;
 
-    private StorePathInfoValidator $storePathInfoValidator;
+    private $storePathInfoValidator;
 
     public function setUp(): void
     {
