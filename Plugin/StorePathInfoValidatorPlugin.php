@@ -16,13 +16,19 @@ use Magento\Store\Model\StoreManagerInterface;
 class StorePathInfoValidatorPlugin
 {
     public const SPECIFIC_STORE_CODE_IN_URL_XML_PATH = 'web/url/specific_store_code_in_url';
+    protected ScopeConfigInterface $scopeConfig;
+    protected StoreManagerInterface $storeManager;
+    protected RequestInterface $request;
 
     public function __construct(
-        private ScopeConfigInterface $scopeConfig,
-        private StoreManagerInterface $storeManager,
-        private RequestInterface $request
+        ScopeConfigInterface $scopeConfig,
+        StoreManagerInterface $storeManager,
+        RequestInterface $request
     ) {
 
+        $this->scopeConfig = $scopeConfig;
+        $this->storeManager = $storeManager;
+        $this->request = $request;
     }
 
     /**
