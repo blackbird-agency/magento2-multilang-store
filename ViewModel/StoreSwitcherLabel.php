@@ -7,7 +7,7 @@ use Magento\Store\Model\ScopeInterface;
 class StoreSwitcherLabel implements \Magento\Framework\View\Element\Block\ArgumentInterface
 {
     public const SPECIFIC_STORE_CODE_LABEL_XML_PATH = 'web/url/specific_store_code_label';
-    protected ScopeConfigInterface $scopeConfig;
+    protected $scopeConfig;
 
     public function __construct
     (

@@ -16,9 +16,9 @@ use Magento\Store\Model\StoreManagerInterface;
 class StorePathInfoValidatorPlugin
 {
     public const SPECIFIC_STORE_CODE_IN_URL_XML_PATH = 'web/url/specific_store_code_in_url';
-    protected ScopeConfigInterface $scopeConfig;
-    protected StoreManagerInterface $storeManager;
-    protected RequestInterface $request;
+    protected $scopeConfig;
+    protected $storeManager;
+    protected $request;
 
     public function __construct(
         ScopeConfigInterface $scopeConfig,
@@ -52,7 +52,7 @@ class StorePathInfoValidatorPlugin
             if (is_string($mageRunCode) && $mageRunCode !== '') {
                 try {
                     $store = $this->getStoreByRunCodeAndRunType($mageRunCode, $mageRunType);
-                } catch (NoSuchEntityException) {
+                } catch (NoSuchEntityException $noSuchEntityException) {
                     return null;
                 }
 
