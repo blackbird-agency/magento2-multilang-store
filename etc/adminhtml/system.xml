@@ -9,10 +9,12 @@
                     <comment>If enabled, show custom store switcher. Doesn't display anything if disabled.</comment>
                 </field>
                 <field id="specific_store_code_in_url" translate="label" type="text" sortOrder="60" showInDefault="0" showInWebsite="0" showInStore="1">
-                    <label>Specific Store Code In Url</label>
+                    <label>Trim Specific Store Code In Url</label>
+                    <comment>Used to retrieve and trim store code in url in order to give the correct request path to magento. E.g. site.com/de to site.com/ </comment>
                 </field>
                 <field id="specific_store_code_label" translate="label" type="text" sortOrder="70" showInDefault="0" showInWebsite="0" showInStore="1">
-                    <label>Specific Store Code Label</label>
+                    <label>Replace Specific Store Name For Store Switcher</label>
+                    <comment>Used in storeswitcher block to display custom name instead of store name. E.g. if your value in the field is 'French' and the store name is 'FR' it will display French instead of FR in the switcher</comment>
                 </field>
             </group>
         </section>
